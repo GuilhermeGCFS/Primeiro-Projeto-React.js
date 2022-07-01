@@ -1,2 +1,2 @@
-# Primeiro-Projeto-React.ts
-Projeto auxiliado de curso, feito em react.ts
+# Primeiro-Projeto-React.js
+Projeto auxiliado de curso, feito em react.js
