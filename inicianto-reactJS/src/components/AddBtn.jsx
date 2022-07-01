@@ -6,6 +6,4 @@ const AddBtn = ({ children, onClick }) => {
   );
 }
 
-<button>Adicionar</button>
-
 export default AddBtn;

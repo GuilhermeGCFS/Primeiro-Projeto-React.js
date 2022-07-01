@@ -46,7 +46,6 @@ const App = () => {
             </div> 
             <div className="sec-two mb-2">
               <AddTask />
-              <AddBtn />
             </div> 
             <div className="sec-three mb-2">
               <Tasks tasks={tasks} />
