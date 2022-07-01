@@ -36,6 +36,19 @@ const App = () => {
     
   ]);
 
+  const handleTaskAddition = (taskTitle) => {
+    const newTasks = [
+      ...tasks, 
+      {
+        title: taskTitle,
+        id: Math.random(10),
+        completed: false,
+      },
+    ];
+
+    setTasks(newTasks);
+  }
+
   return (
     <>
       <div className="containerPage">
@@ -45,12 +58,11 @@ const App = () => {
               <h1>Minhas Depressões</h1>
             </div> 
             <div className="sec-two mb-2">
-              <AddTask />
+              <AddTask handleTaskAddition={handleTaskAddition} />
             </div> 
             <div className="sec-three mb-2">
               <Tasks tasks={tasks} />
             </div>
-            <div className=""></div>
           </div>
         </div>
       </div>
