@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
+import AddBtn from "./components/AddBtn";
 
 import "./App.css";
 
@@ -45,7 +46,7 @@ const App = () => {
             </div> 
             <div className="sec-two mb-2">
               <AddTask />
-              <button>Adicionar</button>
+              <AddBtn />
             </div> 
             <div className="sec-three mb-2">
               <Tasks tasks={tasks} />
