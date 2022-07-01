@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import Tasks from "./components/Tasks";
+import AddTask from "./components/AddTask";
 
 import "./App.css";
 
@@ -39,13 +40,14 @@ const App = () => {
       <div className="containerPage">
         <div className="containerBox">
           <div className="content">
-            <div className="sec-one">
-              <h1>Minhas Tarefas</h1>
-              <button>
-                Adicionar
-              </button>
+            <div className="sec-one mb-3">
+              <h1>Minhas Depressões</h1>
             </div> 
-            <div className="sec-two">
+            <div className="sec-two mb-2">
+              <AddTask />
+              <button>Adicionar</button>
+            </div> 
+            <div className="sec-three mb-2">
               <Tasks tasks={tasks} />
             </div>
             <div className=""></div>
