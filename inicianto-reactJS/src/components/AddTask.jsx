@@ -20,7 +20,7 @@ const AddTask = ({handleTaskAddition}) => {
         value={inputData}
         type="text"
         placeholder="Adicionar Tarefa..." />
-      <button>Adicionar</button>
+      <button onClick={handleAddTaskClick}>Adicionar</button>
     </>
   );
 } 
