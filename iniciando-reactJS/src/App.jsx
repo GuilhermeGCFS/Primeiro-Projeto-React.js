@@ -21,7 +21,7 @@ const App = () => {
     },
     {
       id: '3',
-      title: 'Estudar JavaScript',
+      title: 'Melhorar em JavaScript',
       completed: false,
     },
     {
@@ -31,11 +31,21 @@ const App = () => {
     },
     {
       id: '5',
-      title: 'Estudar Minha Vida',
+      title: 'Aumentar meu conhecimento',
       completed: false,
     },
     
   ]);
+
+  const handleTaskClick = (taskId) => {
+    const newTasks = tasks.map((task) => {
+      if (task.id === taskId) return { ...task, completed: !task.completed };
+
+      return task;
+    });
+
+    setTasks(newTasks);
+  };
 
   const handleTaskAddition = (taskTitle) => {
     const newTasks = [
@@ -56,13 +66,13 @@ const App = () => {
         <div className="containerBox">
           <div className="content">
             <div className="sec-one mb-3">
-              <h1>Minhas Depressões</h1>
+              <h1>Meus Objetivos</h1>
             </div> 
             <div className="sec-two mb-2">
               <AddTask handleTaskAddition={handleTaskAddition} />
             </div> 
             <div className="sec-three mb-2">
-              <Tasks tasks={tasks} />
+              <Tasks tasks={tasks} handleTaskClick={handleTaskClick} />
             </div>
           </div>
         </div>
