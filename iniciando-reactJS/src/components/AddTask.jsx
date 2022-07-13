@@ -20,7 +20,8 @@ const AddTask = ({handleTaskAddition}) => {
         onChange={handleInputChange}
         value={inputData}
         type="text"
-        placeholder="Adicionar Tarefa..." />
+        placeholder="Adicionar Tarefa..."
+        />;
       <button onClick={handleAddTaskClick}>Adicionar</button>
     </>
   );

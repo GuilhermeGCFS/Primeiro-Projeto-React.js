@@ -44,7 +44,7 @@ const App = () => {
       return task;
     });
 
-    setTasks(newTasks);
+    setTasks(newTasks)
   };
 
   const handleTaskAddition = (taskTitle) => {
