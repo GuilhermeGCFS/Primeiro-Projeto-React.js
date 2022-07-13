@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   background: #222;
   font-family: 'Quicksand', sans-serif;
@@ -43,7 +49,7 @@ body {
 }
 
 .sec-one h1 {
-  color: #fff;
+  color: #eee;
   margin: 0;
 }
 
@@ -57,7 +63,7 @@ body {
 /* INPUT DA TAREFA */
 .sec-two input {
   width: 70%;
-  height: 34px;
+  height: 36px;
   border: none;
   outline: none;
   background: #444;
@@ -68,7 +74,7 @@ body {
 }
 
 .sec-two input::placeholder {
-  color: #fff;
+  color: #eee;
 }
 
 
@@ -86,8 +92,14 @@ body {
   font-weight: 600;
   border-radius: 5px;
   background: chartreuse;
+  transition: all 0.3s ease;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+
+.sec-two button:hover {
+  background: #14b900;
+  color: #444;
 }
 
 .sec-task {
@@ -103,7 +115,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   cursor: pointer;
-  color: #fff;
+  color: #eee;
   padding: 10px;
   margin: 0;
 }
@@ -116,8 +128,10 @@ body {
 
 .details_task_btn,
 .remove_task_btn {
+  transition: all 0.3s ease;
   background: transparent;
   color: chartreuse;
+  margin-right: 10px;
   font-weight: bold;
   font-size: 22px;
   cursor: pointer;
@@ -125,6 +139,49 @@ body {
   outline: none;
   border: none;
   display: flex;
+}
+
+.details_task_btn:hover,
+.remove_task_btn:hover {
+  color: #14b900;
+}
+
+.getBack_btn button{
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  color: #444;
+  line-height: 1;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 30px;
+  border-radius: 5px;
+  background: chartreuse;
+}
+
+.getBack_btn button:hover {
+  background: #14b900;
+  color: #444;
+}
+
+.task_details_content {
+  padding: 30px 20px;
+  border-radius: 5px;
+  background-color: #444;
+}
+
+.task_details_content h4 {
+  color: chartreuse;
+  margin: 0 0 20px;
+  font-size: 22px;
+}
+
+.task_details_content p {
+  font-size: 18px;
+  color: #eee;
+  margin: 0;
 }
 
 .task_completed {

@@ -1,7 +1,14 @@
 import React from 'react';
-import {CgClose, CgInfo} from 'react-icons/cg'
+import {CgClose, CgInfo} from 'react-icons/cg';
+import {useNavigate} from 'react-router-dom';
 
 const Task = ({ task, handleTaskClick, handleTaskDeletion }) => {
+
+  const navigate = useNavigate();
+
+  const handleTaskDetailsClick = () => {
+    navigate(`/${task.title}`);
+  }
 
   return (
     <div className="sec-task mb-2" style={task.completed ? { borderLeft: "10px solid chartreuse" } : {}}>
@@ -9,7 +16,7 @@ const Task = ({ task, handleTaskClick, handleTaskDeletion }) => {
         <h3>{task.title}</h3>
       </div>
       <div className="btns">
-        <button className="details_task_btn">
+        <button className="details_task_btn" onClick={handleTaskDetailsClick}>
           <CgInfo />
         </button>
         <button className="remove_task_btn" onClick={() => handleTaskDeletion(task.id)}>
@@ -18,12 +25,6 @@ const Task = ({ task, handleTaskClick, handleTaskDeletion }) => {
       </div>
     </div>
   );
-
-  // return (
-  //   <div className="sec-task mb-2">
-  //     <h3>{task.title}</h3>
-  //   </div>
-  // );
-}
+};
 
 export default Task;
