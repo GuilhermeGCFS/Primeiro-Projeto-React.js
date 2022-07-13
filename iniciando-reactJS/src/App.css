@@ -108,6 +108,25 @@ body {
   margin: 0;
 }
 
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.details_task_btn,
+.remove_task_btn {
+  background: transparent;
+  color: chartreuse;
+  font-weight: bold;
+  font-size: 22px;
+  cursor: pointer;
+  line-height: 1;
+  outline: none;
+  border: none;
+  display: flex;
+}
+
 .task_completed {
   border-left: 10px solid chartreuse;
 }

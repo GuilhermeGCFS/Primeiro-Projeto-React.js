@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
 import AddBtn from "./components/AddBtn";
+import Header from "./components/Header";
 
 import "./App.css";
 
@@ -58,6 +59,12 @@ const App = () => {
     ];
 
     setTasks(newTasks);
+  };
+
+  const handleTaskDeletion = (taskId) => {
+    const newTasks = tasks.filter(task => task.id !== taskId)
+    
+    setTasks(newTasks)
   }
 
   return (
@@ -66,13 +73,17 @@ const App = () => {
         <div className="containerBox">
           <div className="content">
             <div className="sec-one mb-3">
-              <h1>Meus Objetivos</h1>
+              <Header />
             </div> 
             <div className="sec-two mb-2">
               <AddTask handleTaskAddition={handleTaskAddition} />
             </div> 
             <div className="sec-three mb-2">
-              <Tasks tasks={tasks} handleTaskClick={handleTaskClick} />
+              <Tasks
+                tasks={tasks}
+                handleTaskClick={handleTaskClick}
+                handleTaskDeletion={handleTaskDeletion}
+              />
             </div>
           </div>
         </div>
